@@ -1,4 +1,4 @@
-defmodule Chess_State do
+defmodule Chess.Game do
   # These are the starting values of a chess game
   # rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
   defstruct board: "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR",
