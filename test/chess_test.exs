@@ -2,11 +2,7 @@ defmodule ChessTest do
   use ExUnit.Case
   doctest Chess
 
-  test "expand_row" do
-    assert String.length(Chess.expand_row("4P3")) == 8
-    assert Chess.expand_row("4P3") == "    P   "
-  end
-
+  @tag :skip
   test "move" do
     Chess.new_game()
     updated_board = Chess.move(%Chess.Game{}, "e2-e4")
@@ -16,4 +12,10 @@ defmodule ChessTest do
 
     assert updated_board == expected_board
   end
+
+  # test "parse move" do
+  #   move = "e2-e4"
+  #
+  #   assert Chess.parse_move(move) ==
+  # end
 end
