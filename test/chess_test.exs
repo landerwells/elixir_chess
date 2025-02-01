@@ -4,18 +4,28 @@ defmodule ChessTest do
 
   @tag :skip
   test "move" do
+    # This piece of code is not working correctly here
     Chess.new_game()
     updated_board = Chess.move(%Chess.Game{}, "e2-e4")
 
     expected_board =
-      Chess.parse_fen("rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1")
+      Chess.new_game("rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1")
 
     assert updated_board == expected_board
   end
 
-  # test "parse move" do
-  #   move = "e2-e4"
-  #
-  #   assert Chess.parse_move(move) ==
-  # end
+  test "new_game" do
+    expected_game =
+      %Chess.Game{
+        board: "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR",
+        to_move: "b",
+        castle: "KQkq",
+        en_passant: "e3",
+        halfmove: "0",
+        fullmove: "1"
+      }
+
+    assert Chess.new_game("rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1") ==
+             expected_game
+  end
 end

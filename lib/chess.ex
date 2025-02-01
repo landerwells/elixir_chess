@@ -28,6 +28,6 @@ defmodule Chess do
   end
 
   # Given a coordinate, this will return a list of potential legal moves
-  def moves(%Chess.Game{} = game, coordinate) do
-  end
+  # def moves(%Chess.Game{} = game, coordinate) do
+  # end
 end
