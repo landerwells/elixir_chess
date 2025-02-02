@@ -4,7 +4,6 @@ defmodule ChessTest do
 
   @tag :skip
   test "move" do
-    # This piece of code is not working correctly here
     Chess.new_game()
     updated_board = Chess.move(%Chess.Game{}, "e2-e4")
 
@@ -28,4 +27,6 @@ defmodule ChessTest do
     assert Chess.new_game("rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1") ==
              expected_game
   end
+
+  # Here I can test a full game with a scholars mate.
 end

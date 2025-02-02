@@ -46,3 +46,5 @@ All the moves and validation must be done
 
 And the game will tell you when white or black has won
 
+
+Need to define a chess api for writing a frontend. Thi
