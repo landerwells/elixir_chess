@@ -19,7 +19,10 @@ defmodule Chess do
   end
 
   def move(%Chess.Game{} = game, move) do
-    Chess.Move.move(game, move)
+    {:ok, game} = Chess.Move.move(game, move)
+    # This line is technically not necessary but definitely helps when moving via mix
+    IO.puts(Chess.Util.pretty_print_board(Chess.Util.fen_board_to_grid(game.board)))
+    game
   end
 
   def board(%Chess.Game{} = game) do

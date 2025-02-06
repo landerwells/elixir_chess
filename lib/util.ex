@@ -60,9 +60,9 @@ defmodule Chess.Util do
   end
 
   def pretty_print_board(grid) do
-    dividing_row = "+---+---+---+---+---+---+---+---+"
-
-    grid
+    dividing_row = "  +---+---+---+---+---+---+---+---+ "
+    last_row = "   a   b   c   d   e   f   g   h"
+    board = grid
     |> Enum.map(fn row ->
       row
       # Format each cell with padding
@@ -72,5 +72,8 @@ defmodule Chess.Util do
     |> Enum.map(fn row -> "#{dividing_row}\n|#{row}|" end)
     |> Enum.join("\n")
     |> Kernel.<>("\n#{dividing_row}\n")
+    |> Kernel.<>("#{last_row}\n")
+
+    IO.puts board
   end
 end

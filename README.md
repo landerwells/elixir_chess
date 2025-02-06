@@ -19,32 +19,12 @@ Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_do
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at <https://hexdocs.pm/chess>.
 
+My goals for this project are to get a fully working web application up and 
+running with multiplayer chess. I aim to achieve that through the Phoenix web
+framework and using this as a starting back end.
 
-Current Goals
+I think there also might be something called GenServer, which could handle the
+multiplayer if Phoenix only handles the front end and nothing else.
 
-- Get a working move system with piece capturing and nothing else
-- Do not worry about getting a working system down for everything 
+This will by my project for the year and I hope to get it done in 2025.
 
-
-Want to interface entirely through Chess.Game
-
-
-Maybe I should just keep track of the chess game without the fen board, and then
-I could just output to fen notation.
-
-
-I would also like exporting of FEN to a .fen file.
-I think this would be a neat feature.
-
-The first step of the pipeline that I should set up should be the game's start
-
-The player with either start a new game, or enter a FEN from any game position
-
-This will load the game, and then the player can play moves based on it.
-
-All the moves and validation must be done
-
-And the game will tell you when white or black has won
-
-
-Need to define a chess api for writing a frontend. Thi

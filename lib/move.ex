@@ -9,7 +9,7 @@ defmodule Chess.Move do
     # Get the piece from the original position
     piece = Enum.at(Enum.at(grid, from_rank), from_file)
 
-    case Validation.validate_move(piece) do
+    case Validation.validate_move(game, piece) do
       :ok ->
         # Remove the piece from its original position and update the new position
         updated_grid =
